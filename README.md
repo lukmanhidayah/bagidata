@@ -5,6 +5,7 @@ Tes membuat aplikasi React native menggunakan API https://dog.ceo/dog-api/docume
 * [Requirement test](#requirement-test)
 * [Aspek penilaian](#aspek-penilaian)
 * [Catatan](#catatan)
+* [instalasi](#instalasi)
 
 ## Requirement test
 1. Menggunakan React Native versi terbaru
@@ -21,3 +22,18 @@ Tes membuat aplikasi React native menggunakan API https://dog.ceo/dog-api/docume
 ## Catatan
 1. Selesaikan task dalam waktu 5 hari
 2. Kirimkan hasil test berupa kode program dan hasil build aplikasi Android pada repository publik
+
+## Instalasi
+1. clone repository
+```sh
+git clone https://github.com/lukmanhidayah/bagidata.git
+```
+2. install node_modules
+```sh
+npm install
+```
+OR
+
+```sh
+yarn
+```
