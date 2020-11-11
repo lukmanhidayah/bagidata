@@ -21,7 +21,7 @@ const Home = (props) => {
     <SafeAreaView style={styles.screen}>
       <StatusBar backgroundColor="#FEFEFE" barStyle="dark-content" />
       <View style={styles.screen}>
-        <CustomHeader title="Home screen" />
+        <CustomHeader title="Dog's App" titleStyle={{ alignSelf: 'center' }} />
         <FlatList
           style={styles.flatList}
           keyExtractor={keyExtractor}
@@ -43,5 +43,6 @@ const styles = StyleSheet.create({
   flatList: {
     flex: 1,
     padding: 10,
+    paddingVertical: 20
   },
 });

@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
   headerContainer: {
     height: 60,
     width: WIDTH,
-    borderRadius: 5,
     backgroundColor: 'white',
     overflow: 'hidden',
 
