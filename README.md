@@ -8,13 +8,13 @@ Tes membuat aplikasi React native menggunakan API https://dog.ceo/dog-api/docume
 * [instalasi](#instalasi)
 
 ## Requirement test dan implementasi
-1. Menggunakan React Native versi terbaru
-implementasi:
+1. Menggunakan React Native versi terbaru<br/>
+**implementasi**:
     ```sh
     "react-native": "0.63.3",
     ```
-2. Menggunakan redux
-implementasi:
+2. Menggunakan redux<br/>
+**implementasi**:
     ```sh
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
@@ -22,8 +22,8 @@ implementasi:
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0"
     ```
-3. Menggunakan navigasi
-implementasi:
+3. Menggunakan navigasi<br/>
+**implementasi**:
     ```sh
     "@react-navigation/native": "^5.8.9",
     "@react-navigation/stack": "^5.12.6",
@@ -33,14 +33,14 @@ implementasi:
     "react-native-safe-area-context": "^3.1.8",
     "react-native-screens": "^2.14.0",
     ```
-4. Memiliki minimal 3 fitur dari 5 API yang disediakan (lebih banyak, akan lebih baik)
-implementasi:
+4. Memiliki minimal 3 fitur dari 5 API yang disediakan (lebih banyak, akan lebih baik)<br/>
+**implementasi**:
     ```sh
     1. https://dog.ceo/api/breeds/list
     2. https://dog.ceo/api/breed/${name}/images/random
     ```
-5. Menggunakan unit test akan menjadi nilai tambah
-implementasi:
+5. Menggunakan unit test akan menjadi nilai tambah<br/>
+**implementasi**:
 
 ## Aspek penilaian
 1. Interface dari aplikasi
