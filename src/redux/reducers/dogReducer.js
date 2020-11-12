@@ -1,9 +1,16 @@
-import { SET_DOGS, SET_ERROR, SET_LOADING } from '../actions/dogAction';
+import {
+  SET_DOGS,
+  SET_ERROR,
+  SET_LOADING,
+  REQUEST_DATA,
+  RESET,
+} from '../actions/dogAction';
 
 const INITIAL_STATE = {
   isError: false,
   isLoading: true,
   data: [],
+  controller: new AbortController(),
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -23,6 +30,13 @@ export default (state = INITIAL_STATE, action) => {
         ...state,
         isError: action.payload,
       };
+    case REQUEST_DATA:
+      return {
+        ...state,
+        controller: action.payload,
+      };
+    case RESET:
+      return INITIAL_STATE;
     default:
       return state;
   }
