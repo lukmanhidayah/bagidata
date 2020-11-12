@@ -1,19 +1,19 @@
 # Test Mobile Developer - Bagidata
 Tes membuat aplikasi React native menggunakan API https://dog.ceo/dog-api/documentation/
 
-## Table of Contents
+## Daftar Isi
 * [Requirement test & implementasi](#requirement-test-dan-implementasi)
 * [Aspek penilaian](#aspek-penilaian)
 * [Catatan](#catatan)
 * [instalasi](#instalasi)
 
 ## Requirement test dan implementasi
-1. Menggunakan React Native versi terbaru<br/>
+1. Menggunakan React Native versi terbaru ✔<br/>
 **implementasi**:
     ```sh
     "react-native": "0.63.3",
     ```
-2. Menggunakan redux<br/>
+2. Menggunakan redux ✔<br/>
 **implementasi**:
     ```sh
     "react-redux": "^7.2.2",
@@ -22,7 +22,7 @@ Tes membuat aplikasi React native menggunakan API https://dog.ceo/dog-api/docume
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0"
     ```
-3. Menggunakan navigasi<br/>
+3. Menggunakan navigasi ✔<br/>
 **implementasi**:
     ```sh
     "@react-navigation/native": "^5.8.9",
@@ -33,13 +33,13 @@ Tes membuat aplikasi React native menggunakan API https://dog.ceo/dog-api/docume
     "react-native-safe-area-context": "^3.1.8",
     "react-native-screens": "^2.14.0",
     ```
-4. Memiliki minimal 3 fitur dari 5 API yang disediakan (lebih banyak, akan lebih baik)<br/>
+4. Memiliki minimal 3 fitur dari 5 API yang disediakan (lebih banyak, akan lebih baik) ✔<br/>
 **implementasi**:
     ```sh
     1. https://dog.ceo/api/breeds/list
     2. https://dog.ceo/api/breed/${name}/images/random
     ```
-5. Menggunakan unit test akan menjadi nilai tambah<br/>
+5. Menggunakan unit test akan menjadi nilai tambah ✔<br/>
 **implementasi**:
 
 ## Aspek penilaian
