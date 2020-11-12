@@ -5,6 +5,7 @@ import { persistReducer } from 'redux-persist';
 
 //reducers
 import themeReducer from './reducers/themeReducer';
+import dogReducer from './reducers/dogReducer';
 
 const persistConfig = {
   key: 'root',
@@ -14,6 +15,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   theme: themeReducer,
+  dogs: dogReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);

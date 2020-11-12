@@ -13,7 +13,9 @@ import StackNavigator from '../StackNavigator';
 const Dog = createStackNavigator();
 
 //screen
-import DogScreen from '../../screens/dog/Dog.screen';
+import DogScreen, {
+  screenOptions as DogScreenOptions,
+} from '../../screens/dog/Dog.screen';
 
 //main
 const DogNavigator = () => {
@@ -25,14 +27,7 @@ const DogNavigator = () => {
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         animationEnabled: true,
       }}>
-      <Dog.Screen
-        name="Dog"
-        component={DogScreen}
-        options={{
-          headerShown: true,
-          title: "Dogs"
-        }}
-      />
+      <Dog.Screen name="Dog" component={DogScreen} options={DogScreenOptions} />
     </StackNavigator>
   );
 };
