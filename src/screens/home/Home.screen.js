@@ -1,14 +1,18 @@
 import React, { useCallback } from 'react';
-import { StyleSheet, StatusBar, View, FlatList } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { StyleSheet, FlatList } from 'react-native';
+
+//redux
+import { useSelector } from 'react-redux';
+
+//component
 import CustomHeader from '../../components/commons/CustomHeader';
 import HomeList from '../../components/home/HomeList';
 import HOME_DATA from '../../data/HomeData';
+import Container from '../../components/commons/Container';
 
 const Home = (props) => {
-  // useEffect(() => {
-  //   console.log(HOME_DATA);
-  // }, []);
+  const theme = useSelector((state) => state.theme);
+
   const keyExtractor = useCallback((data) => {
     return data.id.toString();
   }, []);
@@ -18,31 +22,35 @@ const Home = (props) => {
   }, []);
 
   return (
-    <SafeAreaView style={styles.screen}>
-      <StatusBar backgroundColor="#FEFEFE" barStyle="dark-content" />
-      <View style={styles.screen}>
-        <CustomHeader title="Dog's App" titleStyle={{ alignSelf: 'center' }} />
-        <FlatList
-          style={styles.flatList}
-          keyExtractor={keyExtractor}
-          data={HOME_DATA}
-          renderItem={renderItem}
-        />
-      </View>
-    </SafeAreaView>
+    <Container>
+      <CustomHeader
+        title="Doggy App"
+        titleStyle={styles.headerTitle(theme.colors.primary)}
+        headerStyle={styles.header(theme.colors.thinBackground)}
+      />
+      <FlatList
+        style={styles.flatList}
+        keyExtractor={keyExtractor}
+        data={HOME_DATA}
+        renderItem={renderItem}
+      />
+    </Container>
   );
 };
 
 export default Home;
 
 const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    backgroundColor: 'white',
-  },
+  header: (bg) => ({
+    backgroundColor: bg || 'white',
+  }),
+  headerTitle: (color) => ({
+    alignSelf: 'center',
+    color: color,
+  }),
   flatList: {
     flex: 1,
     padding: 10,
-    paddingVertical: 20
+    paddingVertical: 20,
   },
 });
