@@ -2,7 +2,7 @@ import React, { useRef, useCallback } from 'react';
 import { StyleSheet, Animated } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import Container from '../../components/commons/Container';
-import ContentHeader from '../../components/setting/ContentHeader';
+import SettingHeader from '../../components/setting/SettingHeader';
 import { changeTheme } from '../../redux/actions/themeAction';
 
 const Setting = () => {
@@ -45,7 +45,7 @@ const Setting = () => {
   }, []);
   return (
     <Container>
-      <ContentHeader
+      <SettingHeader
         onPressDark={onPressDark}
         onPressLight={onPressLight}
         styleDark={{ transform: [{ scale: scaleDark }] }}

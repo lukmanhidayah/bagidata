@@ -36,7 +36,7 @@ Tes membuat aplikasi React native menggunakan API https://dog.ceo/dog-api/docume
 4. Memiliki minimal 3 fitur dari 5 API yang disediakan (lebih banyak, akan lebih baik) ✔<br/>
 **implementasi**:
     ```sh
-    1. https://dog.ceo/api/breeds/list
+    1. https://dog.ceo/api/breeds/list/all
     2. https://dog.ceo/api/breed/${name}/images/random
     ```
 5. Menggunakan unit test akan menjadi nilai tambah ✔<br/>

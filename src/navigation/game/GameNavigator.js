@@ -13,7 +13,9 @@ import StackNavigator from '../StackNavigator';
 const Game = createStackNavigator();
 
 //screen
-import GameScreen from '../../screens/game/Game.screen';
+import GameScreen, {
+  screenOptions as GameScreenOption,
+} from '../../screens/game/Game.screen';
 
 //main
 const GameNavigator = () => {
@@ -28,10 +30,7 @@ const GameNavigator = () => {
       <Game.Screen
         name="Game"
         component={GameScreen}
-        options={{
-          headerShown: true,
-          title: 'Games',
-        }}
+        options={GameScreenOption}
       />
     </StackNavigator>
   );
