@@ -12,6 +12,6 @@ export const DARK_COLOR = {
   thinBackground: '#1f1f1f',
   text: '#FFFFFF',
   border: '#CCCCCC',
-  primary: '#ffefe8',
+  primary: '#fdf4f0',
   barStyle: "light-content"
 };

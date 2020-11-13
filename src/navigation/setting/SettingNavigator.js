@@ -13,7 +13,9 @@ import StackNavigator from '../StackNavigator';
 const Setting = createStackNavigator();
 
 //screen
-import SettingScreen from '../../screens/setting/Setting.screen';
+import SettingScreen, {
+  screenOptions as SettingScreenOption,
+} from '../../screens/setting/Setting.screen';
 
 //main
 const SettingNavigator = () => {
@@ -28,10 +30,7 @@ const SettingNavigator = () => {
       <Setting.Screen
         name="Setting"
         component={SettingScreen}
-        options={{
-          headerShown: true,
-          title: "Settings"
-        }}
+        options={SettingScreenOption}
       />
     </StackNavigator>
   );

@@ -67,7 +67,7 @@ export const screenOptions = () => {
   const theme = useSelector((state) => state.theme);
   return {
     headerShown: true,
-    headerTitle: 'Dog',
+    headerTitle: 'Dogs',
     headerStyle: {
       backgroundColor: theme.colors.thinBackground,
     },

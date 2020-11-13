@@ -43,13 +43,13 @@ export const getDogs = () => {
 
       const newController = new AbortController();
       dispatch(requestData(newController));
-      await fetch('https://dog.ceo/api/breeds/list', {
+      await fetch('https://dog.ceo/api/breeds/list/all', {
         method: 'GET',
         signal: newController.signal,
       })
         .then((res) => res.json())
         .then((res) => {
-          dispatch(setDogs(res.message));
+          dispatch(setDogs(Object.keys(res.message)));
           dispatch(setLoading(false));
         })
         .catch((err) => {
