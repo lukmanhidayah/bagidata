@@ -9,6 +9,10 @@ const CustomImage = ({ imageUrl, imageStyle }) => {
     setIsLoading(false);
   }, []);
 
+  const onLoadStart = useCallback(() => {
+    setIsLoading(true);
+  }, []);
+
   const theme = useSelector((state) => state.theme);
   return (
     <View>
@@ -16,6 +20,7 @@ const CustomImage = ({ imageUrl, imageStyle }) => {
         source={{ uri: imageUrl, priority: FastImage.priority.high }}
         style={[imageStyle]}
         onLoadEnd={onLoadEnd}
+        onLoadStart={onLoadStart}
         resizeMode={FastImage.resizeMode.cover}
       />
       {isLoading && (
@@ -28,5 +33,11 @@ const CustomImage = ({ imageUrl, imageStyle }) => {
     </View>
   );
 };
+
+export const MemorizeCustomImage = React.memo(CustomImage, compare);
+
+function compare(prevState, nextState) {
+  return JSON.stringify(prevState) == JSON.stringify(nextState);
+}
 
 export default CustomImage;

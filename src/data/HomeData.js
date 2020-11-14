@@ -27,7 +27,7 @@ const HOME_DATA = [
   new HomeModel(
     '3',
     'Setting',
-    'Make the application comfortable for you by changing the settings according to your preferences',
+    'Changing the settings according to your preferences',
     LocalImage.settings,
     'Setting',
     colors[3 % colors.length],

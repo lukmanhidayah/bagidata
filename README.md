@@ -38,6 +38,7 @@ Tes membuat aplikasi React native menggunakan API https://dog.ceo/dog-api/docume
     ```sh
     1. https://dog.ceo/api/breeds/list/all
     2. https://dog.ceo/api/breed/${name}/images/random
+    3. https://dog.ceo/api/breeds/image/random
     ```
 5. Menggunakan unit test akan menjadi nilai tambah ✔<br/>
 **implementasi**:

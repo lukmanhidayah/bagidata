@@ -19,6 +19,7 @@ const CustomButton = (props) => {
       activeOpacity={0.7}
       rippleOpacity={0.1}
       useForeground={true}
+      disabled={props.disabled}
       style={[styles.card, props.style]}
       onPress={props.onPress}>
       {props.children}
