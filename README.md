@@ -40,7 +40,7 @@ Tes membuat aplikasi React native menggunakan API https://dog.ceo/dog-api/docume
     2. https://dog.ceo/api/breed/${name}/images/random
     3. https://dog.ceo/api/breeds/image/random
     ```
-5. Menggunakan unit test akan menjadi nilai tambah ✔<br/>
+5. Menggunakan unit test akan menjadi nilai tambah<br/>
 **implementasi**:
 
 ## Aspek penilaian
