@@ -28,8 +28,10 @@ export default GameMessage;
 
 const styles = StyleSheet.create({
   messageContainer: {
-    paddingVertical: 5,
-    paddingHorizontal: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 5,
+    elevation: 3,
     alignSelf: 'center',
   },
   text: {

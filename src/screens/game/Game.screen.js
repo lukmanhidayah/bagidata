@@ -62,7 +62,6 @@ const Game = () => {
       .then((res) => res.json())
       .then((res) => {
         if (res.message !== '') {
-          console.log(res.message);
           setImageUrl(res.message);
           setListBreeds((prevState) =>
             prevState.length != 0

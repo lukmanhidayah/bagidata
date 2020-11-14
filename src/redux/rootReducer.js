@@ -6,16 +6,18 @@ import { persistReducer } from 'redux-persist';
 //reducers
 import themeReducer from './reducers/themeReducer';
 import dogReducer from './reducers/dogReducer';
+import likeReducer from './reducers/likeReducer';
 
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['theme'],
+  whitelist: ['theme', 'like'],
 };
 
 const rootReducer = combineReducers({
   theme: themeReducer,
   dogs: dogReducer,
+  like: likeReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);

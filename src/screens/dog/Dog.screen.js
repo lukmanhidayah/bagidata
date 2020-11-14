@@ -37,8 +37,8 @@ const Dog = () => {
     return idx.toString();
   }, []);
 
-  const renderItem = ({ item }) => {
-    return <DogItem name={item} theme={theme} />;
+  const renderItem = ({ item, index }) => {
+    return <DogItem name={item} theme={theme} index={index} />;
   };
 
   return (
