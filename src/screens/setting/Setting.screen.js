@@ -1,13 +1,18 @@
 import React, { useRef, useCallback } from 'react';
 import { StyleSheet, Animated, View, Text } from 'react-native';
-import FastImage from 'react-native-fast-image';
-import { useDispatch, useSelector } from 'react-redux';
+
+//component
 import LocalImage from '../../assets/images/LocalImage';
 import Container from '../../components/commons/Container';
 import SettingHeader from '../../components/setting/SettingHeader';
-import { changeTheme } from '../../redux/actions/themeAction';
-import CustomButton from '../../components/commons/CustomButton';
 import SettingCard from '../../components/setting/SettingCard';
+
+//redux
+import { useDispatch, useSelector } from 'react-redux';
+import { changeTheme, resetTheme } from '../../redux/actions/themeAction';
+import { resetDog } from '../../redux/actions/dogAction';
+import { resetLike } from '../../redux/actions/likeAction';
+
 const Setting = () => {
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme);
@@ -32,6 +37,10 @@ const Setting = () => {
 
   const onPressLight = useCallback(() => {
     dispatch(changeTheme(false));
+    lightThemeAnimation();
+  }, []);
+
+  const lightThemeAnimation = () => {
     Animated.parallel([
       Animated.spring(scaleLight, {
         toValue: 1.3,
@@ -45,7 +54,17 @@ const Setting = () => {
         useNativeDriver: true,
       }),
     ]).start();
-  }, []);
+  };
+
+  const onResetPress = () => {
+    if (theme.isDark) {
+      lightThemeAnimation();
+    }
+    dispatch(resetDog());
+    dispatch(resetLike());
+    dispatch(resetTheme());
+  };
+
   return (
     <Container>
       <SettingHeader
@@ -58,6 +77,7 @@ const Setting = () => {
       />
       <View style={{ padding: 20 }}>
         <SettingCard
+          onPress={onResetPress}
           theme={theme}
           source={LocalImage.profile}
           titleText={'Reset'}

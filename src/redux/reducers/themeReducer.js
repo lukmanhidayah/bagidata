@@ -1,4 +1,4 @@
-import { CHANGE_THEME } from '../actions/themeAction';
+import { CHANGE_THEME, RESET } from '../actions/themeAction';
 import { DEFAULT_COLOR, DARK_COLOR } from '../../constants/colors';
 
 const INITIAL_STATE = {
@@ -18,6 +18,8 @@ export default (state = INITIAL_STATE, action) => {
         scaleLight: action.payload ? 1 : 1.3,
         scaleDark: action.payload ? 1.3 : 1,
       };
+    case RESET:
+      return INITIAL_STATE;
     default:
       return state;
   }

@@ -1,7 +1,4 @@
-import {
-  ADD_LIKED,
-  REMOVE_LIKED,
-} from '../actions/likeAction';
+import { ADD_LIKED, REMOVE_LIKED, RESET } from '../actions/likeAction';
 
 const INITIAL_STATE = {
   data: [],
@@ -22,6 +19,10 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         data: deleteTamp,
+      };
+    case RESET:
+      return {
+        data: [],
       };
     default:
       return state;

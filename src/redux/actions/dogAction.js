@@ -68,3 +68,9 @@ export const getDogs = () => {
     }
   };
 };
+
+export const resetDog = () => {
+  return {
+    type: RESET,
+  };
+};
