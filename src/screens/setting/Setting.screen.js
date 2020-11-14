@@ -1,10 +1,13 @@
 import React, { useRef, useCallback } from 'react';
-import { StyleSheet, Animated } from 'react-native';
+import { StyleSheet, Animated, View, Text } from 'react-native';
+import FastImage from 'react-native-fast-image';
 import { useDispatch, useSelector } from 'react-redux';
+import LocalImage from '../../assets/images/LocalImage';
 import Container from '../../components/commons/Container';
 import SettingHeader from '../../components/setting/SettingHeader';
 import { changeTheme } from '../../redux/actions/themeAction';
-
+import CustomButton from '../../components/commons/CustomButton';
+import SettingCard from '../../components/setting/SettingCard';
 const Setting = () => {
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme);
@@ -53,6 +56,14 @@ const Setting = () => {
         styleLight={{ transform: [{ scale: scaleLight }] }}
         styleTextLightContainer={{ transform: [{ scale: scaleLight }] }}
       />
+      <View style={{ padding: 20 }}>
+        <SettingCard
+          theme={theme}
+          source={LocalImage.profile}
+          titleText={'Reset'}
+          descText={'Clear all data and back to default setting'}
+        />
+      </View>
     </Container>
   );
 };
